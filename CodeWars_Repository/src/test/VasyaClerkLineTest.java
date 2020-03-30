@@ -10,9 +10,17 @@ public class VasyaClerkLineTest {
 
 	@Test
 	public void TestDefaultNoWhenEmptyStringArrayIsProvided() {
-		String[] input = {};
-		String result = new VasyaClerkLine().Tickets(input);
+		int[] input = {};
+		String result = VasyaClerkLine.Tickets(input);
 	    assertEquals("Response did no match","No",result);
 				
 	}
+	
+	@Test
+	public void TestYesWhen25IsSent() {
+		int[] input = {25};
+		String result = VasyaClerkLine.Tickets(input);
+	    assertEquals("Response did no match","Yes",result);
+	}
+	
 }
