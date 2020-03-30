@@ -6,7 +6,7 @@ public class VasyaClerkLine {
 		int count25 = 0;
 		int count50 = 0;
 		if(input == null || input.length == 0) {
-			return "No";
+			return "NO";
 		}
 		for(int i: input) {
 			if(i == 25) {
@@ -28,10 +28,10 @@ public class VasyaClerkLine {
 			}
 			
 			if(count25 < 0 || count50 < 0) {
-				return "No";
+				return "NO";
 			}
 		}
-		return "Yes";
+		return "YES";
 	}
 
 }
