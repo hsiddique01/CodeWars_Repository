@@ -9,25 +9,24 @@ public class ToCamelCase {
 	private static String dashSeperator(String input) {
 		String[] arr = input.split("-");
 		String result = "";
-		for(int i = 0; i < arr.length; i++) {
-			if(i > 0) {
-				result = result + arr[i].substring(0,1).toUpperCase() + arr[i].substring(1);
+		for(String s: arr) {
+			if(!s.equals(arr[0])) {
+				result = result + s.substring(0,1).toUpperCase() + s.substring(1);
 			} else {
-				result = arr[i];
+				result = s;
 			}
 		}
-		
 		return result;
 	}
-
+	
 	private static String underScoreSeperator(String input) {
 		String[] arr = input.split("_");
 		String result = "";
-		for(int i = 0; i < arr.length; i++) {
-			if(i > 0) {
-				result = result + arr[i].substring(0,1).toUpperCase() + arr[i].substring(1);
+		for(String s: arr) {
+			if(!s.equals(arr[0])) {
+				result = result + s.substring(0,1).toUpperCase() + s.substring(1);
 			} else {
-				result = arr[i];
+				result = s;
 			}
 		}
 		return result;
