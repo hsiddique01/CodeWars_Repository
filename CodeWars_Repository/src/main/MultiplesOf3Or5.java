@@ -6,35 +6,20 @@ public class MultiplesOf3Or5 {
 	 * Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
 	 */
 	public int Solution(int input) {
-		if(input < 0) {
-			return minusSum(input);
+		int sum = 0;
+		int minusCheck = 1;
+		int newInput = 0;
+		if(input > 0) {
+			newInput = input;
 		} else {
-			return positiveSum(input);
+			newInput = -input;
+			minusCheck = -1;
 		}
-	}
-
-	private int positiveSum(int input) {
-		int sum = 0;
-		for (int i = 0; i <= input; i++) {
-			System.out.println("for i = " + i + ", sum before the check = " + sum);
+		for (int i = 0; i <= newInput; i++) {
 			if (i % 3 == 0 || i % 5 == 0) {
 				sum += i;
-				System.out.println(sum);
 			}
 		}
-		return sum;
+		return sum*minusCheck;		
 	}
-
-	private int minusSum(int input) {
-		int sum = 0;
-		for (int i = 0; i <= -input; i++) {
-			System.out.println("for i = " + i + ", sum before the check = " + sum);
-			if (i % 3 == 0 || i % 5 == 0) {
-				sum += i;
-				System.out.println(sum);
-			}
-		}
-		return -sum;
-	}
-
 }
