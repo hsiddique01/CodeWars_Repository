@@ -1,11 +1,15 @@
 package main;
 
+import org.junit.Test;
+
 public class ToCamelCase {
 
+	@Test
 	public static String toCamelCase(String input) {
 		return input.contains("-") ? dashSeperator(input): underScoreSeperator(input);
 	}
 
+	@Test
 	private static String dashSeperator(String input) {
 		String[] arr = input.split("-");
 		String result = "";
@@ -19,6 +23,7 @@ public class ToCamelCase {
 		return result;
 	}
 	
+	@Test
 	private static String underScoreSeperator(String input) {
 		String[] arr = input.split("_");
 		String result = "";
